@@ -1,6 +1,7 @@
 <?php
 include('libreria/operaciones.php');
-$operaciones = new Operaciones
+
+$operaciones = new Operaciones;
 ?>
 <!DOCTYPE html>
 <html lang="es">
