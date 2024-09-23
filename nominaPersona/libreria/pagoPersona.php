@@ -1,7 +1,8 @@
 <?php
 class PagoPersona
 {
-    private $pago;
+    private $diasTrabajados;
+    private $valorDia;
     public $salario;
     public $pagoSalud;
     public $pagoPension;
@@ -9,14 +10,16 @@ class PagoPersona
     public $descuentos;
     public $pagoTotal;
 
-    public function __construct(Salario $pago)
+    public function __construct(Salario $valorDia, Salario $diasTrabajados)
     {
-        $this->pago = $pago;
+        $this->diasTrabajados = $diasTrabajados;
+        $this->valorDia = $valorDia;
     }
 
     public function calcularSalario()
     {
-        $this->salario = $this->pago->getDiasTrabajados() * $this->pago->getValorDia();
+        $this->salario = $this->diasTrabajados->getDiasTrabajados() * $this->valorDia->getValorDia();
+
         return $this->salario;
     }
 

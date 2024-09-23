@@ -13,4 +13,3 @@ class Persona
         return $this->nombrePersona;
     }
 }
-?>

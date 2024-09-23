@@ -1,4 +1,4 @@
-/*body {
+body {
   background-image: url("../img/iman.jpg");
   background-size: cover;
   background-position: center;
@@ -8,4 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}*/
+}
+
+.fondoNomina {
+  background-color: white;
+  border-radius: 20px; 
+  border: solid 1px #000;
+  width: 500px;
+  min-height: 220px; 
+  padding: 20px; 
+}
+
+.posiciones {
+  margin-bottom: 15px; 
+}

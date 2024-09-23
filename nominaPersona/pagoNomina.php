@@ -17,89 +17,78 @@ $salarioPersona = new Salario($dia, $valor);
 $salarioPersona->setDiasTrabajados($dia);
 $salarioPersona->setValorDia($valor);
 
-
+//objeto PagoPersona
+$pago = new PagoPersona($salarioPersona, $salarioPersona);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('principal/head.php');?>
+    <?php include('principal/head.php'); ?>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <div class="fondoNomina">
-            <br>
-            <h1 class="d-flex justify-content-center">Pago Nomina <i class="fa-solid fa-clipboard-user"></i></h1>
-            <div class="col-md-12 row">
 
-                <div class="col-md-2 "> Nombre:</div>
-                <div class="col-md-10 d-flex justify-content-start">
-                    <?php
-                    echo $persona->getNombrePersona();
-                    ?>
+            <h1 class="mb-4 d-flex justify-content-center">Pago Nómina <i class="fa-solid fa-clipboard-user"></i></h1>
+
+
+            <div class="row posiciones">
+                <div class="col-md-4">Nombre:</div>
+                <div class="col-md-8">
+                    <?php echo $persona->getNombrePersona(); ?>
                 </div>
             </div>
-            <div class="col-md-12 row">
 
-                <div class="col-md-2"> Dias Trabajados:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    echo $salarioPersona->getDiasTrabajados();
-                    ?>
+
+            <div class="row posiciones">
+                <div class="col-md-4">Días Trabajados:</div>
+                <div class="col-md-2">
+                    <?php echo $salarioPersona->getDiasTrabajados(); ?>
                 </div>
-                <div class="col-md-2"> Valor Dia:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    echo $salarioPersona->getValorDia();
-                    ?>
+                <div class="col-md-4">Valor Día:</div>
+                <div class="col-md-1">
+                    <?php echo $salarioPersona->getValorDia(); ?>
                 </div>
             </div>
-            <div class="col-md-12 row">
 
-                <div class="col-md-2"> Pago Salud:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $salud;
-                    ?>
+
+            <div class="row posiciones">
+                <div class="col-md-4">Pago Salud:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularSalud(); ?>
                 </div>
-                <div class="col-md-2"> Pago Pensión:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $pension;
-                    ?>
+                <div class="col-md-4">Pago Pensión:</div>
+                <div class="col-md-1">
+                    <?php echo $pago->calcularPension(); ?>
                 </div>
             </div>
-            <div class="col-md-12 row">
 
-                <div class="col-md-2"> Pago Arl:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $arl;
-                    ?>
+
+            <div class="row posiciones">
+                <div class="col-md-4">Pago ARL:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularArl(); ?>
                 </div>
-                <div class="col-md-2"> Salario:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $salarioCalculado;
-                    ?>
+                <div class="col-md-4">Salario:</div>
+                <div class="col-md-1">
+                    <?php echo $pago->calcularSalario(); ?>
                 </div>
             </div>
-            <div class="col-md-12 row">
 
-                <div class="col-md-2"> Descuentos:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $descuentos;
-                    ?>
+
+            <div class="row posiciones">
+                <div class="col-md-4">Descuentos:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularDescuentos(); ?>
                 </div>
-                <div class="col-md-2"> Pago Total:</div>
-                <div class="col-md-1 d-flex justify-content-start">
-                    <?php
-                    // echo $pagoFinal;
-                    ?>
+                <div class="col-md-4">Pago Total:</div>
+                <div class="col-md-1">
+                    <?php echo $pago->calcularPagoFinal(); ?>
                 </div>
             </div>
         </div>
