@@ -27,4 +27,4 @@ class Salario
     {
         return $this->valorDia;
     }
-}
+}?>

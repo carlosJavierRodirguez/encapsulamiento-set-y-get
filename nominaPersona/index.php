@@ -9,9 +9,7 @@ include('libreria/pagoPersona.php')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    include('principal/head.php');
-    ?>
+    <?php include('principal/head.php'); ?>
 </head>
 
 <body>
@@ -22,7 +20,7 @@ include('libreria/pagoPersona.php')
             <form class="row g-3" action="pagoNomina.php" method="post">
 
                 <div class="col-md-12 mb-3">
-                    <label for="txtNombrePersona" class="form-label">Nombre completo:</label>
+                    <label for="txtNombrePersona" class="form-label"><i class="fa-solid fa-user-pen"></i> Nombre completo:</label>
                     <input type="text" class="form-control" id="txtNombrePersona" name="txtNombrePersona" required>
                 </div>
 
@@ -30,11 +28,11 @@ include('libreria/pagoPersona.php')
                 <div class="col-md-12 mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="txtDiasTrabajados" class="form-label">Días Trabajados:</label>
+                            <label for="txtDiasTrabajados" class="form-label"><i class="fa-solid fa-calendar-days"></i> Días Trabajados:</label>
                             <input type="number" class="form-control" min="0" id="txtDiasTrabajados" name="txtDiasTrabajados" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="txtValorDia" class="form-label">Valor Día:</label>
+                            <label for="txtValorDia" class="form-label"><i class="fa-solid fa-money-check-dollar"></i> Valor Día:</label>
                             <input type="number" class="form-control" min="0" id="txtValorDia" name="txtValorDia" required>
                         </div>
                     </div>
@@ -42,7 +40,7 @@ include('libreria/pagoPersona.php')
 
 
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Calcular <i class="fa-solid fa-calculator"></i></button>
+                    <button class="btn btn-dark" type="submit">Calcular <i class="fa-solid fa-calculator"></i></button>
                 </div>
             </form>
         </div>

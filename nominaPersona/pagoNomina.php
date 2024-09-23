@@ -38,7 +38,7 @@ $pago = new PagoPersona($salarioPersona, $salarioPersona);
 
 
             <div class="row posiciones">
-                <div class="col-md-4">Nombre:</div>
+                <div class="col-md-4"><i class="fa-solid fa-user"></i> Nombre:</div>
                 <div class="col-md-8">
                     <?php echo $persona->getNombrePersona(); ?>
                 </div>
@@ -46,50 +46,53 @@ $pago = new PagoPersona($salarioPersona, $salarioPersona);
 
 
             <div class="row posiciones">
-                <div class="col-md-4">Días Trabajados:</div>
+                <div class="col-md-4"><i class="fa-solid fa-calendar-days"></i> Días Trabajados:</div>
                 <div class="col-md-2">
                     <?php echo $salarioPersona->getDiasTrabajados(); ?>
                 </div>
-                <div class="col-md-4">Valor Día:</div>
-                <div class="col-md-1">
-                    <?php echo $salarioPersona->getValorDia(); ?>
+                <div class="col-md-4"><i class="fa-solid fa-person-cane"></i> Pago Pensión:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularPension(); ?>
                 </div>
+
             </div>
 
-
             <div class="row posiciones">
-                <div class="col-md-4">Pago Salud:</div>
+                <div class="col-md-4"><i class="fa-solid fa-money-check-dollar"></i> Valor del Día:</div>
+                <div class="col-md-2">
+                    <?php echo $salarioPersona->getValorDia(); ?>
+                </div>
+                <div class="col-md-4"><i class="fa-solid fa-user-doctor"></i> Pago Salud:</div>
                 <div class="col-md-2">
                     <?php echo $pago->calcularSalud(); ?>
                 </div>
-                <div class="col-md-4">Pago Pensión:</div>
-                <div class="col-md-1">
-                    <?php echo $pago->calcularPension(); ?>
-                </div>
+
             </div>
 
 
             <div class="row posiciones">
-                <div class="col-md-4">Pago ARL:</div>
+                <div class="col-md-4"><i class="fa-solid fa-money-bill"></i> Salario:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularSalario(); ?>
+                </div>
+                <div class="col-md-4"><i class="fa-solid fa-person-falling-burst"></i> Pago ARL:</div>
                 <div class="col-md-2">
                     <?php echo $pago->calcularArl(); ?>
                 </div>
-                <div class="col-md-4">Salario:</div>
-                <div class="col-md-1">
-                    <?php echo $pago->calcularSalario(); ?>
-                </div>
+
             </div>
 
 
             <div class="row posiciones">
-                <div class="col-md-4">Descuentos:</div>
+                <div class="col-md-4"><i class="fa-solid fa-sack-dollar"></i> Pago Total:</div>
+                <div class="col-md-2">
+                    <?php echo $pago->calcularPagoFinal(); ?>
+                </div>
+                <div class="col-md-4"><i class="fa-solid fa-percent"></i> Descuentos:</div>
                 <div class="col-md-2">
                     <?php echo $pago->calcularDescuentos(); ?>
                 </div>
-                <div class="col-md-4">Pago Total:</div>
-                <div class="col-md-1">
-                    <?php echo $pago->calcularPagoFinal(); ?>
-                </div>
+
             </div>
         </div>
     </div>

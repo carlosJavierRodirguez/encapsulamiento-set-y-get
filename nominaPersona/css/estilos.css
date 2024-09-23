@@ -1,5 +1,5 @@
 body {
-  background-image: url("../img/iman.jpg");
+  background-image: url("../img/nomina.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ body {
 }
 
 .fondoNomina {
-  background-color: white;
+  background-color: rgb(240, 204, 157);
   border-radius: 20px; 
   border: solid 1px #000;
   width: 500px;
