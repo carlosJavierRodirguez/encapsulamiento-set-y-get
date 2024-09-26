@@ -1,0 +1,18 @@
+body{
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenes{
+    width: 100%;
+    height: auto;
+}
+.fondoAreas{
+    background-color: aliceblue;
+}
