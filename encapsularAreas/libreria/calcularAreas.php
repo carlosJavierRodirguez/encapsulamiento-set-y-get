@@ -3,34 +3,32 @@ require('numeros.php');
 
 class Areas extends Numeros
 {
-    private $numeroDos;
-    private $numeroUno;
     public $areaCirculo;
     public $areaCuadrado;
     public $areaRectangulo;
     public $areaTriangulo;
 
-    function rectangulo()
+    public function rectangulo()
     {
-        $this->areaRectangulo = $this->numeroUno->getNumeroUno() *  $this->numeroDos->getNumeroDos();
+        $this->areaRectangulo = $this->getNumeroUno() *  $this->getNumeroDos();
         return  $this->areaRectangulo;
     }
 
-    function triangulo()
+   public function triangulo()
     {
-        $this->areaTriangulo = ($this->numeroUno->getNumeroUno() *  $this->numeroDos->getNumeroDos()) / 2;
+        $this->areaTriangulo = ($this->getNumeroUno() *  $this->getNumeroDos()) / 2;
         return  $this->areaTriangulo;
     }
 
-    function cuadrado()
+   public function cuadrado()
     {
-        $this->areaCuadrado = $this->numeroUno->getNumeroUno() *  $this->numeroUno->getNumeroUno();
+        $this->areaCuadrado = $this->getNumeroUno() *  $this->getNumeroUno();
         return  $this->areaCuadrado;
     }
 
-    function circulo()
+   public function circulo()
     {
-        $this->areaCirculo = ($this->numeroUno->getNumeroUno() *  $this->numeroUno->getNumeroUno()) * 3.1416;
+        $this->areaCirculo = ($this->getNumeroUno() *  $this->getNumeroUno()) * 3.1416;
         return  $this->areaCirculo;
     }
 }

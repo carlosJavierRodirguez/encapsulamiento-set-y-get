@@ -1,15 +1,15 @@
 <?php
 include('calcularAreas.php');
 
-$areas = new Areas;
+$areas = new Areas();
 
 $info = file_get_contents("php://input");
 $dataNumber = json_decode($info, true);
 
-$operaciones->setNumeroUno($dataNumber['ladoCuadrado']);
+$areas->setNumeroUno($dataNumber['lado']);
 
 $dataOperaciones[] = [
-    "Area del Cuadrado" => $operaciones->cuadrado(),
+    "area_cuadrado" => $areas->cuadrado(),
 ];
 
 header('Content-Type: application/json');

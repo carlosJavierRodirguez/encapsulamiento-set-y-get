@@ -61,7 +61,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST">
+                            <form id="formRectangulo">
                                 <div class="mb-3">
                                     <label for="baseRectangulo" class="form-label">Base:</label>
                                     <input type="number" name="baseRectangulo" id="baseRectangulo" class="form-control" required>
@@ -72,7 +72,10 @@
                                 </div>
                                 <div>
                                     <label for="resultadoRectangulo" class="form-label">Resultado:</label>
-                                    <p><?php echo $areaRectangulo; ?></p>
+                                    <div class="resultado">
+
+                                    </div>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" name="calcularRectangulo" class="btn btn-primary">Calcular</button>
@@ -157,6 +160,7 @@
         </div>
     </div>
     <script src="js/cuadrado.js"></script>
+    <script src="js/rectangulo.js"></script>
 </body>
 
 </html>
