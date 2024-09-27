@@ -9,10 +9,10 @@ $dataNumber = json_decode($info, true);
 $areas->setNumeroUno($dataNumber['base']);
 $areas->setNumeroDos($dataNumber['altura']);
 
-$areaRectangulo[] = [
-    "area_rectangulo" => $areas->rectangulo(),
+$areaTriangulo[] = [
+    "area_triangulo" => $areas->triangulo(),
     
 ];
 
 header('Content-Type: application/json');
-echo json_encode($areaRectangulo);
+echo json_encode($areaTriangulo);

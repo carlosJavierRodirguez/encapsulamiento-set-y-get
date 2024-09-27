@@ -13,7 +13,7 @@
             </div>
 
             <!-- Modal Cuadrado -->
-            <div class="col-3">
+            <div class="col-3 d-flex align-items-center">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalCuadrado">
                     <img src="img/cuadrado.png" class="imagenes" alt="Cuadrado">
                 </button>
@@ -49,7 +49,7 @@
 
             <!-- Modal Rectángulo -->
             <div class="col-3">
-                <button type="button" class="btn d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalRectangulo">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalRectangulo">
                     <img src="img/rectangulo.png" class="imagenes " alt="Rectángulo">
                 </button>
             </div>
@@ -71,8 +71,8 @@
                                     <input type="number" name="alturaRectangulo" id="alturaRectangulo" class="form-control" required>
                                 </div>
                                 <div>
-                                    <label for="resultadoRectangulo" class="form-label">Resultado:</label>
-                                    <div class="resultado">
+                                    <label class="form-label">Resultado:</label>
+                                    <div class="resultadoRectangulo">
 
                                     </div>
 
@@ -101,7 +101,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST">
+                            <form id="formTriangulo">
                                 <div class="mb-3">
                                     <label for="baseTriangulo" class="form-label">Base:</label>
                                     <input type="number" name="baseTriangulo" id="baseTriangulo" class="form-control" required>
@@ -111,8 +111,10 @@
                                     <input type="number" name="alturaTriangulo" id="alturaTriangulo" class="form-control" required>
                                 </div>
                                 <div>
-                                    <label for="resultadoTriangulo" class="form-label">Resultado:</label>
-                                    <p><?php echo $areaTriangulo; ?></p>
+                                    <label class="form-label">Resultado:</label>
+                                    <div class="resultadoTriangulo">
+
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" name="calcularTriangulo" class="btn btn-primary">Calcular</button>
@@ -138,14 +140,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST">
+                            <form id="formCirculo">
                                 <div class="mb-3">
                                     <label for="radioCirculo" class="form-label">Radio:</label>
                                     <input type="number" name="radioCirculo" id="radioCirculo" class="form-control" required>
                                 </div>
                                 <div>
-                                    <label for="resultadoCirculo" class="form-label">Resultado:</label>
-                                    <p><?php echo $areaCirculo; ?></p>
+                                    <label class="form-label">Resultado:</label>
+                                    <div class="resultadoCirculo"></div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" name="calcularCirculo" class="btn btn-primary">Calcular</button>
@@ -161,6 +163,8 @@
     </div>
     <script src="js/cuadrado.js"></script>
     <script src="js/rectangulo.js"></script>
+    <script src="js/circulo.js"></script>
+    <script src="js/triangulo.js"></script>
 </body>
 
 </html>

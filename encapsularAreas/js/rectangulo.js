@@ -1,33 +1,30 @@
 window.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formRectangulo");
-  const mostar = document.querySelector(".resultado");
+  const mostar = document.querySelector(".resultadoRectangulo");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let base = document.querySelector("baseRectangulo").value;
-    let altura = document.querySelector("alturaRectangulo").value;
+    let base = document.querySelector("#baseRectangulo").value;
+    let altura = document.querySelector("#alturaRectangulo").value;
 
-    const dataOperaciones = {
+    const areaRectangulo = {
       base,
-      altura
+      altura,
     };
 
-    fetch("php/registerRectangulo.php", {
+    fetch("libreria/registerRectangulo.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(dataOperaciones),
+      body: JSON.stringify(areaRectangulo),
     })
       .then((response) => response.json())
       .then((data) => {
         let html = "";
         data.forEach((oper) => {
-          html = `
-                    <div class="col-12">suma: ${oper.suma}</div>
-                    <div class="col-12">resta: ${oper.resta}</div>
-                `;
+          html = ` <div class="col-12">${oper.area_rectangulo}</div> `;
         });
 
         mostar.innerHTML = html;
