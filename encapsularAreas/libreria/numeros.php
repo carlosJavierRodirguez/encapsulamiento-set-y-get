@@ -4,11 +4,6 @@ class Numeros
     private $numeroUno;
     private $numeroDos;
 
-    //  public function __construct($numeroUno, $numeroDos = null)
-    // {
-    //     $this->numeroUno = $numeroUno;
-    //     $this->numeroDos = $numeroDos;
-    // }
 
     public function setNumeroUno($numeroUno)
     {
